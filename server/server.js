@@ -2,8 +2,10 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import ingestRouter from './routes/ingest.js';
 
 const app = express();
+app.use('/api', ingestRouter);
 app.use(cors());
 app.use(express.json());
 
