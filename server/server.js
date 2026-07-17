@@ -3,11 +3,13 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import ingestRouter from './routes/ingest.js';
+import queryRouter from './routes/query.js';
 
 const app = express();
-app.use('/api', ingestRouter);
 app.use(cors());
 app.use(express.json());
+app.use('/api', ingestRouter);
+app.use('/api', queryRouter);
 
 app.get('/health', (req, res) => {
   const states = ['disconnected', 'connected', 'connecting', 'disconnecting'];
