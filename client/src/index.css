@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+* { box-sizing: border-box; }
+html, body, #root { margin: 0; padding: 0; height: 100%; }
+body { background: #14131a; }
+
+/* dark scrollbar to match the theme */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-thumb { background: #2b2935; border-radius: 8px; border: 2px solid #14131a; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* loading animations */
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes blink { 0%, 60%, 100% { opacity: 0.25; } 30% { opacity: 1; } }
+
+input::placeholder { color: #4a4856; }
