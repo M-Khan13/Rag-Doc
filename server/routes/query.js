@@ -11,7 +11,7 @@ router.post('/query', async (req, res) => {
         const { question, topK = 4 } = req.body;
         if (!question) return res.status(400).json({ error: 'No question provided' });
 
-        const qVec = await embed(question);
+        const qVec = await embed(question, 'query');
         const chunks = await Chunk.find({}).lean();
         if (chunks.length === 0) return res.status(400).json({ error: 'No chunks stored' });
 

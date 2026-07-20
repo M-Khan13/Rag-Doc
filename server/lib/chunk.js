@@ -1,4 +1,4 @@
-const DEFAULTS = { size: 800, overlap: 100 };
+const DEFAULTS = { size: 500, overlap: 100 };
 
 export function chunkPage(text, page, opts = {}) {
   const { size, overlap } = { ...DEFAULTS, ...opts };
